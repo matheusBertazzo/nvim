@@ -56,6 +56,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
 			vim.keymap.set(mode, keys, func, { buffer = event.buf, desc = 'LSP: ' .. desc })
 		end
 
+		-- Telescope lsp built-ins documentation: https://github.com/nvim-telescope/telescope.nvim?tab=readme-ov-file#neovim-lsp-pickers
 		-- Jump to the definition
 		map('gd', require('telescope.builtin').lsp_definitions, '[G]oto [D]efinition')
 
